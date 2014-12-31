@@ -1,0 +1,28 @@
+somefile.readline()
+	Read a single line of string data, up to and including the first line separator you encounter
+	optional arg: somefile.readline(n), where n is the maximum number of characters to read for this line.
+
+somefile.readlines()
+	Read all the lines of a file at once and have them retuend as a list.
+	Strongly deprecated by one poster on StackOverflow, 
+
+somefile.xreadlines()
+	useful when iterating over file contents.
+
+somefile.writeline()
+	Give it a list of strings and it writes all the strings to the file OR STREAM.
+
+somefile.writelines()
+	Give it a list of strings and it writes all the strings to the file OR STREAM.
+
+outfile = open('C:\MyDocs\PSI\Onset\HoboWare\PSI-TestData\HoboWxSta-PSItest-Output.txt', 'w')
+outfile.write(infile_line)
+	
+to be certain that your file is closed, use try/finally:
+	#open the file
+	try:
+		#dostuff
+	finally:
+		somefile.close()
+
+
