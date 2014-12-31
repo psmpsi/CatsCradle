@@ -12,8 +12,8 @@
 #add: logic to parse (term?) the data header line to "understand" it - possibly even read data elements into variables, which might be the best way to re-order or otherwise mainpulate the strings.
 #add: logic to parse (term?) the repeating data lines to "understand" them - like the header line above.
 #add: code to write the re-ordered data line to a different file.
-outfile = open('C:\MyDocs\PSI\Onset\HoboWare\PSI-TestData\HoboWxSta-PSItest-Output.txt', 'a')
-with open('C:\MyDocs\PSI\Onset\HoboWare\PSI-TestData\HoboWxSta-PSItest-Input.txt', 'r') as infile:
+outfile = open('C:\MyDocs\GitHub\CatsCradle\HoboWxSta-PSItest-Output.txt', 'a')
+with open('C:\MyDocs\GitHub\CatsCradle\HoboWxSta-PSItest-Input.txt', 'r') as infile:
 		# ,r is read; , w is rite; w+ or a for append
 		#absolute file path is preferred. same folder OK, but relative is dangerous.
 		#with creates a new block, which normally has a colon at the end of the starting line. to end the block.
