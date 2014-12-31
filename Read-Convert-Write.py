@@ -1,17 +1,17 @@
 #add: call to import the CSV module, -or- modules for string manipulation.
-#add: code to write the string, exactly as read, to a different file.
-	#with open('C:\MyDocs\PSI\Onset\HoboWare\PSI-TestData\HoboWxSta-PSItest-Output.txt', 'r') as outfile:
-	#open is defined on page 67, in Built-in Functions.
 #enhance the above: code to replace the comma delimiters with another delimiter, then write the modified string to a different file.
-#add: a loop to iterate the readline command until end of file
+#added: code to write the string, exactly as read, to a different file (remember mode = a for append):
+	# outfile = open('C:\MyDocs\GitHub\CatsCradle\HoboWxSta-PSItest-Output.txt', 'a')
+#added: a loop to iterate the readline command until end of file
 	#for line in infile:  uses file iterators to step through lines in a file
 #end of first project.
 #next project: 
-#add: code to search for the data header line in the real data file, which has dozens of lines of info before the data starts
-#add: code to search for the first data line in the real data file.
-#add: logic to parse (term?) the data header line to "understand" it - possibly even read data elements into variables, which might be the best way to re-order or otherwise mainpulate the strings.
-#add: logic to parse (term?) the repeating data lines to "understand" them - like the header line above.
-#add: code to write the re-ordered data line to a different file.
+	#enhance: ask user for the input file and output file paths (or read them from a config file)
+	#add: code to search for the data header line in the real data file, which has dozens of lines of info before the data starts, and not start readline until the header is found.
+	#add: code to search for the first data line in the real data file (next line after data header).
+	#add: logic to parse theheader line and repeating data lines to "understand" it - read data elements into variables - to re-order or otherwise mainpulate the strings.
+		#approach: use dict, which establishes data tables?
+		#then write the re-ordered data line to a different file.
 outfile = open('C:\MyDocs\GitHub\CatsCradle\HoboWxSta-PSItest-Output.txt', 'a')
 with open('C:\MyDocs\GitHub\CatsCradle\HoboWxSta-PSItest-Input.txt', 'r') as infile:
 		# ,r is read; , w is rite; w+ or a for append

@@ -25,4 +25,10 @@ to be certain that your file is closed, use try/finally:
 	finally:
 		somefile.close()
 
-
+#added: code to write the string, exactly as read, to a different file.
+	#first try: with open('C:\MyDocs\PSI\Onset\HoboWare\PSI-TestData\HoboWxSta-PSItest-Output.txt', 'r') as outfile:
+	#(open is defined on page 67, in Built-in Functions.)
+	#replaced with: outfile = open('C:\MyDocs\GitHub\CatsCradle\HoboWxSta-PSItest-Output.txt', 'a')
+	
+#added: a loop to iterate the readline command until end of file
+	#for line in infile:  uses file iterators to step through lines in a file
