@@ -1,0 +1,110 @@
+Megan and Chris hints:
+	#To run your code: in Terminal, type "python <filename>"
+	#Don't have to declare variables ahead of time; in fact, in Python you never have to.
+	#this is "duck-typing" - usually works well, sometimes fails.
+	#Python is a run-time language, not compiled.
+	#Windows uses CRLF, and Unix uses just LF. Python knows which platform it's on and uses "\n" to add the appropriate line end. 
+	#Python has a CSV utility which will be my friend.
+	# ,r is read; , w is rite; w+ or a for append
+	#absolute file path is preferred. Same folder is OK, but relative is dangerous.
+	#with creates a new block, which must have a colon at the end of the line
+	#new block requires both colon and indentation.
+
+
+
+String Manipulation:
+http://www.pythonforbeginners.com/basics/string-manipulation-in-python - Very Good Basics
+	To manipulate strings, use some of Pythons built-in methods.
+	word = "Hello World"			# Create a string variable and assign a value
+	  print word		=> Hello World	# Output to stdout
+	letter=word[0]				# Use [ ] to access characters in a string
+	  print letter		=> H		# because counting and indexing in Python start with zero
+	len(word)		=> 11		
+	  print word.count('l')	=> 3		# count how many times l is in the string
+	  print word.find("H")	=> 0		# find the character H in the string and return its position
+	  print word.index("World") => 6	# find the characters "World" in the stringprint word[0]          #get one char of the word
+
+	Slicing:
+	  print word[0]		=> H		#get one char of the word
+	  print word[0:1]	=> H		#get one char of the word (same as above)
+	  print word[0:3]	=> Hel		#get the first three char
+	  print word[:3]	=> Hel		#get the first three char
+	  print word[-3:]	=> rld		#get the last three char
+	  print word[3:]	=> lo World	#get all but the three first char
+	  print word[:-3]	=> Hello Wo	#get all but the three last char
+ 
+	  word[start:end]	=> Hello Worl	# items start through end-1
+	  word[start:]		=> Hello World	# items start through the rest of the list
+	  word[:end]		=> Hello Worl	# items from the beginning through end-1
+	  word[:]		=> Hello World	# a copy of the whole list and return the beginning position
+
+	Split Strings:
+	  word.split(' ')	=> 'Hello', 'World'	# Split on whitespace
+
+	Starts with / Ends with:
+	  word.startswith("H")	=> True
+	  word.endswith("d")	=> True
+	  word.endswith("w")	=> False
+
+	Counting characters:
+	  s =  "Count, the number     of spaces"	# assign a value to s
+	  print s.count(' ')	=> 8		# Counts the number of spaces
+
+	Repeating strings:
+	  print "."* 10		=> ..........	# prints ten dots
+
+	Replacing characters:
+	  word = "Hello World"
+	  word.replace("Hello", "Goodbye") => 'Goodbye World'
+
+	Changing Upper and Lower Case:
+	  print word.upper()		=> HELLO WORLD	# Return an uppercase version of the string
+	  print word.lower()		=> hello world	# Return a lowercase version of the string
+	  print word.title()		=> Hello World	# Return a titlecased version of the string
+	  print word.capitalize()	=> Hello world	# Return a version of the string with the first letter capitalized
+	  print word.swapcase()		=> hELLO wORLD	# Return a version of the string with case reversed
+
+str.title()	
+
+	Reversing:
+	  print ' '.join(reversed(string))	=> d l r o W   o l l e H
+	Strip:
+	    Python strings have the strip(), lstrip(), rstrip() methods for removing any character from both ends of a string. 
+	    If the characters to be removed are not specified then white-space will be removed
+
+	print word.strip('\n')	=> Hello World		# Strip off newline characters from end of the string
+	  word = "    xyz    "
+	  print word		=> '    xyz    '
+	  print word.strip()	=> 'xyz'		# removes from both ends
+	  print word.lstrip()	=> 'xyz    '		# removes leading characters (Left-strip)
+	  print word.rstrip()	=> '    xyz'		# removes trailing characters (Right-strip)
+
+	Concatenation:
+	  To concatenate strings in Python use the "+" operator. 
+	  "Hello " + "World" 				# = "Hello World"
+	  "Hello " + "World" + "!"			# = "Hello World!"
+	Join:
+	  print ":".join(word)	=> H:e:l:l:o: :W:o:r:l:d	# add a : between every char
+	  print " ".join(word)	=> H e l l o   W o r l d	# add a whitespace between every char
+
+	Testing: A string in Python can be tested for truth value. The return will be a Boolean value (True or False)
+	  word.isalnum()         #check if all char are numbers
+	  word.isalpha()         #check if all char in the string are alphabetic
+	  word.isdigit()         #test if string contains digits
+	  word.istitle()         #test if string contains title words
+	  word.isupper()         #test if string contains upper case
+	  word.islower()         #test if string contains lower case
+	  word.isspace()         #test if string contains spaces
+	  word.endswith('d')     #test if string endswith a d
+	  word.startswith('H')   #test if string startswith H
+
+
+http://www.idiotinside.com/2014/09/04/string-processing-in-python - Very Good Basics
+	
+http://www.tutorialspoint.com/python/python_strings.htm - Very well-written
+
+https://docs.python.org/2/library/strings.html - Official Site
+https://docs.python.org/2/library/string.html - Official Site
+
+https://www.udemy.com/blog/python-string-functions/ - Have to Join - Did Not
+

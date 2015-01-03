@@ -1,0 +1,1 @@
+"#","Time, Eastern Daylight Time","Rain, in","Rain, in","Water Content (cal), vol/vol","Water Content (cal), vol/vol","Temp, *F","Temp, *F","Temp, *F","Temp, *F","Water Content (cal), vol/vol","Temp, *F","RH, %","DewPt, *F","Solar Rad, W/m^2","Wind Speed, mph","Gust Speed, mph","Wind Dir, *","Batt, V"
