@@ -12,9 +12,10 @@
         #approach: use dict, which establishes data tables?
         #then write the re-ordered data line to a different file.
 outfile = open('C:\MyDocs\GitHub\CatsCradle\Out.txt', 'a')
+
 with open('C:\MyDocs\GitHub\CatsCradle\in.txt', 'r') as infile:
-    for line in infile.readline():  # is this redundant after the "with open" above?
-        myline = infile.readline()
+    for line in infile:
+        myline = line
         myline.replace(",", "><")   # the replace method is not working
         print(myline)               # this command only executes once; the loop is not looping
         outfile.write(myline)       # this command only executes once; the loop is not looping
