@@ -16,6 +16,11 @@ outfile = open('C:\MyDocs\GitHub\CatsCradle\Out.txt', 'a')
 with open('C:\MyDocs\GitHub\CatsCradle\in.txt', 'r') as infile:
     for line in infile:
         myline = line
-        myline.replace(",", "><")   # the replace method is not working
-        print(myline)               # this command only executes once; the loop is not looping
-        outfile.write(myline)       # this command only executes once; the loop is not looping
+        # line below wasn't working because you never assigned the modified
+        # copy of the string to a variable
+        doctored_line = myline.replace(",", "><")
+        print(doctored_line)
+        outfile.write(doctored_line)
+
+# still need to close outfile because you are not using the with syntax
+outfile.close()
